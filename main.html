@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="url"],
+        input[type="color"],
+        input[type="range"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+<h2 style="text-align: center;">Feedback Form</h2>
+
+<form action="#" method="POST"> <!-- Form submission method is POST -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+
+    <label for="portfolio">Portfolio:</label>
+    <input type="url" id="portfolio" name="portfolio" required>
+
+    <label for="favColor">Favorite Color:</label>
+    <input type="color" id="favColor" name="favColor" required>
+
+    <label for="likeness">Likeness (1 to 100):</label>
+    <input type="range" id="likeness" name="likeness" min="1" max="100" required>
+
+    <input type="submit" value="Submit Feedback">
+</form>
 
 </body>
-
 </html>
